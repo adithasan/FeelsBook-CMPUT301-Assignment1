@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">adit-FeelsBook</string>
+    <string name="button_Love">Love</string>
+    <string name="button_Joy">Joy</string>
+    <string name="button_Surprise">Surprise</string>
+    <string name="button_Anger">Anger</string>
+    <string name="button_Sadness">Sadness</string>
+    <string name="button_Fear">Fear</string>
+    <string name="button_History">History</string>
+    <string name="button_Stats">Stats</string>
+</resources>
