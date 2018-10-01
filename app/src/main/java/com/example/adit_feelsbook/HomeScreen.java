@@ -1,5 +1,6 @@
 package com.example.adit_feelsbook;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -28,13 +29,8 @@ public class HomeScreen extends AppCompatActivity {
 
     public void ShowHistory(View view)
     {
-        // Will eventually take you to new activity
-
-        // For now just print to log
-        for (Feeling feeling : mFeelingsList)
-        {
-            String log = "Added " + feeling.GetFeelingName() + " at: " + feeling.mTimeStamp.toString();
-            Log.d("History", log);
-        }
+        // Navigate to History Screen
+        Intent intent = new Intent(this, HistoryActivity.class);
+        startActivity(intent);
     }
 }
