@@ -12,17 +12,17 @@ There are a number of unimplemented features as of Friday, Oct 5 2018, 12:21PM.
 
 Acknowlegements:
 
-Source: Laura Sicui : myandroidsolutions.com
-Contribution: ApplicationContextProvider class
-Link: https://www.myandroidsolutions.com/2013/04/27/android-get-application-context/#.W7fMqhNKjVp
-Accessed: Oct 4, 2018
-Post last updated: Aug 13, 2018
+Source: Laura Sicui : myandroidsolutions.com  
+Contribution: ApplicationContextProvider class  
+Link: https://www.myandroidsolutions.com/2013/04/27/android-get-application-context/#.W7fMqhNKjVp  
+Accessed: Oct 4, 2018  
+Post last updated: Aug 13, 2018  
 
-Source: Arslan : StackOverflow user
-Contribution: Loading String from saved file
-https://stackoverflow.com/a/9095665
-Accessed: Oct 4, 2018
-Post created: Feb 1, 2012
+Source: Arslan : StackOverflow user  
+Contribution: Loading String from saved file  
+https://stackoverflow.com/a/9095665  
+Accessed: Oct 4, 2018  
+Post created: Feb 1, 2012  
 
 NOTE: developer.android.com was heavily drawed upon for inspiration
 
