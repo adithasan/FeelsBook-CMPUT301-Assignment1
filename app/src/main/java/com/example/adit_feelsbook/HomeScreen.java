@@ -11,6 +11,11 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+/*
+    This activity class is the main screen for the application
+    It has functionality to add feelings and access the history
+    and Stats screen
+ */
 public class HomeScreen extends AppCompatActivity {
     private static final String fileName = "FeelingsData.dat";
 

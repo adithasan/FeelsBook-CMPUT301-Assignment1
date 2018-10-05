@@ -53,6 +53,11 @@ public class FeelingsManager
         return fileContents;
     }
 
+    // Acknowledgement
+    // Source: Arslan : StackOverflow user
+    // https://stackoverflow.com/a/9095665
+    // Accessed: Oct 4, 2018
+    // Post created: Feb 1, 2012
     private String LoadFromFile()
     {
         StringBuffer datax = new StringBuffer("");

@@ -8,6 +8,11 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+/*
+    This class handles the view and behaviour of the scrollable
+    and selectable (unimplemented) list of emotions
+ */
+
 public class FeelingEntryRecyclerViewAdapter extends RecyclerView.Adapter<FeelingEntryRecyclerViewAdapter.FeelingViewHolder> {
     private ArrayList<Feeling> mFeelings;
 

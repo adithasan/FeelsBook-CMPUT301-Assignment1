@@ -9,6 +9,9 @@ import org.w3c.dom.Text;
 
 import java.util.Map;
 
+/*
+    This activity class displays the stats for all the feelings
+ */
 public class FeelingStatsActivity extends AppCompatActivity {
 
     Map<FeelingState, Integer> mFeelingsMap;

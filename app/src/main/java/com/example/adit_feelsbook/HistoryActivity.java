@@ -10,6 +10,10 @@ import android.util.Log;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+/*
+    This activity class holds a scrollable and selectable
+    list of feelings that have been saved
+ */
 public class HistoryActivity extends AppCompatActivity {
 
 
