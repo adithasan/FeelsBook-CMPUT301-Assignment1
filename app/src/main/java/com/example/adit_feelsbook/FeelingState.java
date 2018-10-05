@@ -2,7 +2,7 @@ package com.example.adit_feelsbook;
 
 public enum FeelingState
 {
-    Angry,
+    Anger,
     Joy,
     Sadness,
     Love,

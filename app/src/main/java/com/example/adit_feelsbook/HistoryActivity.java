@@ -19,22 +19,14 @@ public class HistoryActivity extends AppCompatActivity {
     public void LoadFeelings(ArrayList<Feeling> feelings)
     {
         // TODO: move this function to a class to be used everywhere
-        feelings.add(new Joy("This is the first joy feeling"));
-        feelings.add(new Love("Love feeling added!"));
-        feelings.add(new Anger());
-        feelings.add(new Sadness("Added sadness"));
-        feelings.add(new Joy("This is the first joy feeling"));
-        feelings.add(new Love("Love feeling added!"));
-        feelings.add(new Anger());
-        feelings.add(new Sadness("Added sadness"));
-        feelings.add(new Joy("This is the first joy feeling"));
-        feelings.add(new Love("Love feeling added!"));
-        feelings.add(new Anger());
-        feelings.add(new Sadness("Added sadness"));
-        feelings.add(new Joy("This is the first joy feeling"));
-        feelings.add(new Love("Love feeling added!"));
-        feelings.add(new Anger());
-        feelings.add(new Sadness("Added sadness"));
+        feelings.add(new Feeling(FeelingState.Joy, "This is the first joy feeling"));
+        feelings.add(new Feeling(FeelingState.Love, "Love feeling added!"));
+        feelings.add(new Feeling(FeelingState.Sadness));
+        feelings.add(new Feeling(FeelingState.Sadness, "Added sadness"));
+        feelings.add(new Feeling(FeelingState.Joy, "This is the second joy feeling"));
+        feelings.add(new Feeling(FeelingState.Love,"Love feeling added!"));
+        feelings.add(new Feeling(FeelingState.Fear));
+        feelings.add(new Feeling(FeelingState.Sadness, "Added sadness"));
     }
 
     @Override

@@ -45,7 +45,7 @@ public class FeelingEntryRecyclerViewAdapter extends RecyclerView.Adapter<Feelin
     {
         // get element from dataset at this position
         // replace the contents of the view with that element
-        holder.mFeelingName.setText(mFeelings.get(position).GetFeelingName());
+        holder.mFeelingName.setText(mFeelings.get(position).GetFeelingState().toString());
         holder.mComment.setText(mFeelings.get(position).GetComment());
         holder.mTimeStamp.setText(mFeelings.get(position).GetTimeStamp().toString());
     }

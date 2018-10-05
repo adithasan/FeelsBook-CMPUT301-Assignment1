@@ -9,14 +9,16 @@ public class Feeling
     protected int mIndex;
     protected FeelingState mFeelingState;
 
-    public Feeling()
+    public Feeling(FeelingState feelingState)
     {
+        mFeelingState = feelingState;
         mTimeStamp = new Date();
         mComment = "";
     }
 
-    public Feeling(String comment)
+    public Feeling(FeelingState feelingState, String comment)
     {
+        mFeelingState = feelingState;
         mTimeStamp = new Date();
         mComment = comment;
     }
@@ -52,7 +54,7 @@ public class Feeling
         return mIndex;
     }
 
-    public FeelingState GetFeelingName()
+    public FeelingState GetFeelingState()
     {
         return mFeelingState;
     }

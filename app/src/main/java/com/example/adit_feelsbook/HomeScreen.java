@@ -20,12 +20,12 @@ public class HomeScreen extends AppCompatActivity {
     }
 
     // Adding feelings
-    public void addLove(View view)       { mFeelingsList.add(new Love()); }
-    public void addJoy(View view)        { mFeelingsList.add(new Joy()); }
-    public void addSurprise(View view)   { mFeelingsList.add(new Surprise()); }
-    public void addAnger(View view)      { mFeelingsList.add(new Anger()); }
-    public void addSadness(View view)    { mFeelingsList.add(new Sadness()); }
-    public void addFear(View view)       { mFeelingsList.add(new Fear()); }
+    public void addLove(View view)       { mFeelingsList.add(new Feeling(FeelingState.Love)); }
+    public void addJoy(View view)        { mFeelingsList.add(new Feeling(FeelingState.Joy)); }
+    public void addSurprise(View view)   { mFeelingsList.add(new Feeling(FeelingState.Surprise)); }
+    public void addAnger(View view)      { mFeelingsList.add(new Feeling(FeelingState.Anger)); }
+    public void addSadness(View view)    { mFeelingsList.add(new Feeling(FeelingState.Sadness)); }
+    public void addFear(View view)       { mFeelingsList.add(new Feeling(FeelingState.Fear)); }
 
     public void ShowHistory(View view)
     {
