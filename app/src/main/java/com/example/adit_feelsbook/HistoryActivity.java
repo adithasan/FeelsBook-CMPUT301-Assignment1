@@ -12,8 +12,6 @@ import java.util.Arrays;
 
 public class HistoryActivity extends AppCompatActivity {
 
-    // TODO: modify this to include the real file name
-    public static final String FILE_NAME = "SOME_FILE_NAME";
 
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;

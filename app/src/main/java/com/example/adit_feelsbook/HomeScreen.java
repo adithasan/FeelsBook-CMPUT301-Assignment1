@@ -1,15 +1,18 @@
 package com.example.adit_feelsbook;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
 
 public class HomeScreen extends AppCompatActivity {
+    private static final String fileName = "FeelingsData.dat";
 
     private ArrayList<Feeling> mFeelingsList;
     private FeelingsManager mFeelingsManager;
@@ -19,9 +22,14 @@ public class HomeScreen extends AppCompatActivity {
         setContentView(R.layout.activity_home_screen);
         mFeelingsManager = new FeelingsManager();
         mFeelingsList = new ArrayList<>();
-        // load all saved emotions
-        Feeling[] feelingsArray = mFeelingsManager.LoadFeelings();
-        mFeelingsList = new ArrayList(Arrays.asList(feelingsArray));
+
+        // load all saved emotions if file exists
+        File file = ApplicationContextProvider.getContext().getFileStreamPath(fileName);
+        if(file != null && file.exists())
+        {
+            Feeling[] feelingsArray = mFeelingsManager.LoadFeelings();
+            mFeelingsList = new ArrayList(Arrays.asList(feelingsArray));
+        }
     }
 
     // Adding feelings
