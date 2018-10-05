@@ -50,7 +50,6 @@ public class HomeScreen extends AppCompatActivity {
     {
         super.onPause();
         Feeling[] feelings;
-        Log.d("Serializer", Integer.toString(mFeelingsList.size()));
         feelings = mFeelingsList.toArray(new Feeling[mFeelingsList.size()]);
         mFeelingsManager.SaveFeelings(feelings);
     }

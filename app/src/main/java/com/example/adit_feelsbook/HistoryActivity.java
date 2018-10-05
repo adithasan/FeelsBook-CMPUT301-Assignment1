@@ -35,12 +35,12 @@ public class HistoryActivity extends AppCompatActivity {
         mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
+        // load data from JSON file and populate the Arraylist of Feelings
         ArrayList<Feeling> feelings;
         Feeling[] feelingsArray = mFeelingsManager.LoadFeelings();
         feelings = new ArrayList(Arrays.asList(feelingsArray));
 
         mAdapter = new FeelingEntryRecyclerViewAdapter(feelings);
         mRecyclerView.setAdapter(mAdapter);
-        // load data from JSON file and populate the Arraylist of Feelings
     }
 }
