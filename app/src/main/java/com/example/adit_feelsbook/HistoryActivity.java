@@ -1,5 +1,6 @@
 package com.example.adit_feelsbook;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -23,6 +24,10 @@ public class HistoryActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history);
+        Intent intent = getIntent();
+        String message = intent.getStringExtra(HomeScreen.EXTRA_MESSAGE);
+        if (message == "StatsScreen") return;
+
         mRecyclerView = (RecyclerView) findViewById(R.id.Feelings_RecyclerView);
 
         mFeelingsManager = new FeelingsManager();

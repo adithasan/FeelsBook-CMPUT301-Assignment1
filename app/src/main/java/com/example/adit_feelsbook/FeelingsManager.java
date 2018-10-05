@@ -11,16 +11,19 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.HashMap;
+import java.util.Map;
 
 public class FeelingsManager
 {
-    private static final String fileName = "FeelingsData.dat";
     // This class will handle all operations on and by feelings
     // This will involve but not be limited to:
     // Serializing/Deserializing from JSON file
     // Saving/Loading
     // Editing, Deleting
     // Stat calculation
+
+    private static final String fileName = "FeelingsData.dat";
 
     public void SaveFeelings(Feeling[] feelings)
     {
@@ -82,5 +85,18 @@ public class FeelingsManager
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public Map<FeelingState, Integer> LoadFeelingStats()
+    {
+        Map<FeelingState, Integer> feelingsMap = new HashMap<>();
+        Feeling[] feelings = LoadFeelings();
+
+        for (Feeling feeling : feelings)
+        {
+            Integer count = feelingsMap.containsKey(feeling.mFeelingState) ? feelingsMap.get(feeling.mFeelingState) : 0;
+            feelingsMap.put(feeling.mFeelingState, count + 1);
+        }
+        return feelingsMap;
     }
 }
