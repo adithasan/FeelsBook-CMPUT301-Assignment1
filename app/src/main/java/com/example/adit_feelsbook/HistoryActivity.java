@@ -24,9 +24,6 @@ public class HistoryActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history);
-        Intent intent = getIntent();
-        String message = intent.getStringExtra(HomeScreen.EXTRA_MESSAGE);
-        if (message == "StatsScreen") return;
 
         mRecyclerView = (RecyclerView) findViewById(R.id.Feelings_RecyclerView);
 
