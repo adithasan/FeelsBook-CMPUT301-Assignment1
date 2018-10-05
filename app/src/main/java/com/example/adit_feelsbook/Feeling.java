@@ -2,10 +2,12 @@ package com.example.adit_feelsbook;
 
 import java.util.Date;
 
-public abstract class Feeling
+public class Feeling
 {
     protected String mComment;
     protected Date mTimeStamp;
+    protected int mIndex;
+    protected FeelingState mFeelingState;
 
     public Feeling()
     {
@@ -40,5 +42,18 @@ public abstract class Feeling
         mComment = comment;
     }
 
-    public abstract String GetFeelingName();
+    public void SetIndex(int index)
+    {
+        mIndex = index;
+    }
+
+    public int GetIndex()
+    {
+        return mIndex;
+    }
+
+    public FeelingState GetFeelingName()
+    {
+        return mFeelingState;
+    }
 }
