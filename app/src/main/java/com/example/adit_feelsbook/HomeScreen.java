@@ -11,10 +11,12 @@ import java.util.ArrayList;
 public class HomeScreen extends AppCompatActivity {
 
     private ArrayList<Feeling> mFeelingsList;
+    private FeelingsManager mFeelingsManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
+        mFeelingsManager = new FeelingsManager();
         mFeelingsList = new ArrayList<>();
         // load all saved emotions
     }
@@ -26,6 +28,16 @@ public class HomeScreen extends AppCompatActivity {
     public void addAnger(View view)      { mFeelingsList.add(new Feeling(FeelingState.Anger)); }
     public void addSadness(View view)    { mFeelingsList.add(new Feeling(FeelingState.Sadness)); }
     public void addFear(View view)       { mFeelingsList.add(new Feeling(FeelingState.Fear)); }
+
+    @Override
+    protected void onPause()
+    {
+        super.onPause();
+        Feeling[] feelings;
+        Log.d("Serializer", Integer.toString(mFeelingsList.size()));
+        feelings = mFeelingsList.toArray(new Feeling[mFeelingsList.size()]);
+        mFeelingsManager.SaveFeelings(feelings);
+    }
 
     public void ShowHistory(View view)
     {

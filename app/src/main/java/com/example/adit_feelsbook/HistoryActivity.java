@@ -4,8 +4,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class HistoryActivity extends AppCompatActivity {
 
@@ -15,19 +17,7 @@ public class HistoryActivity extends AppCompatActivity {
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
-
-    public void LoadFeelings(ArrayList<Feeling> feelings)
-    {
-        // TODO: move this function to a class to be used everywhere
-        feelings.add(new Feeling(FeelingState.Joy, "This is the first joy feeling"));
-        feelings.add(new Feeling(FeelingState.Love, "Love feeling added!"));
-        feelings.add(new Feeling(FeelingState.Sadness));
-        feelings.add(new Feeling(FeelingState.Sadness, "Added sadness"));
-        feelings.add(new Feeling(FeelingState.Joy, "This is the second joy feeling"));
-        feelings.add(new Feeling(FeelingState.Love,"Love feeling added!"));
-        feelings.add(new Feeling(FeelingState.Fear));
-        feelings.add(new Feeling(FeelingState.Sadness, "Added sadness"));
-    }
+    private FeelingsManager mFeelingsManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,12 +25,15 @@ public class HistoryActivity extends AppCompatActivity {
         setContentView(R.layout.activity_history);
         mRecyclerView = (RecyclerView) findViewById(R.id.Feelings_RecyclerView);
 
+        mFeelingsManager = new FeelingsManager();
+
         // use a linear layout manager
         mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
-        ArrayList<Feeling> feelings = new ArrayList<>();
-        LoadFeelings(feelings);
+        ArrayList<Feeling> feelings;
+        Feeling[] feelingsArray = mFeelingsManager.LoadFeelings();
+        feelings = new ArrayList(Arrays.asList(feelingsArray));
 
         mAdapter = new FeelingEntryRecyclerViewAdapter(feelings);
         mRecyclerView.setAdapter(mAdapter);

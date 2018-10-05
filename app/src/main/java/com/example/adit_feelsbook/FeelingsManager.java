@@ -1,6 +1,7 @@
 package com.example.adit_feelsbook;
 
 import android.content.Context;
+import android.util.Log;
 
 import com.google.gson.Gson;
 
@@ -30,7 +31,7 @@ public class FeelingsManager
     public Feeling[] LoadFeelings()
     {
         String fileContents = LoadFromFile();
-        return Deserialize(fileContents);
+        return  Deserialize(fileContents);
     }
 
     private Feeling[] Deserialize(String fileContents)
